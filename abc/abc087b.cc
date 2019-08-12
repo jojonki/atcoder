@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+// なんて言うか５０の倍数であることは気にせず，普通に3重for回せばよかった．50^3ほどの処理なので回せる
 int main()
 {
     int A, B, C, X, count = 0;
