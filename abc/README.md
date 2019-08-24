@@ -1,4 +1,5 @@
 ## Checks
+- 040c (memo recursive, DP)
 - 122c (right-left)
 - 125c (GCD, left-right)
 - 128b
