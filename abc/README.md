@@ -1,4 +1,5 @@
 ## Checks
+- 122c (right-left)
 - 125c (GCD, left-right)
 - 128b
 - 128c
