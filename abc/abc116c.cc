@@ -45,8 +45,7 @@ int main() {
             }
         }
     }
-    // print(m);
     cout << ct << endl;
-    
+
     return 0;
 }
