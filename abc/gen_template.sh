@@ -1,16 +1,13 @@
 #!/bin/sh
 
-if [ $# -ne 1 ]; then
+if [ $# -ne 2 ]; then
   echo "need to specify program number"
   exit 1
 fi
 
-cp code_template.cc ./abc$1a.cc
-cp code_template.cc ./abc$1b.cc
-cp code_template.cc ./abc$1c.cc
-cp code_template.cc ./abc$1d.cc
-
-touch ./t/t_abc$1a.txt
-touch ./t/t_abc$1b.txt
-touch ./t/t_abc$1c.txt
-touch ./t/t_abc$1d.txt
+# echo $2
+for char in `echo $2 | fold -w 1`; do
+  echo "Generate abc$1$char" 
+  cp code_template.cc ./abc$1$char.cc
+  touch ./t/t_abc$1$char.txt
+done
