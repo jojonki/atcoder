@@ -1,5 +1,6 @@
 ## Checks
 - 040c (memo recursive, DP)
+- 116c (tower range)
 - 122c (right-left)
 - 125c (GCD, left-right)
 - 128b
