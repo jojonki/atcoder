@@ -1,5 +1,6 @@
 ## Checks
 - 040c (memo recursive, DP)
+- 113c (demension reduction)
 - 114c (recursive, dfs)
 - 115d (recursive)
 - 116c (tower range)
