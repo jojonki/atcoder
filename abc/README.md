@@ -1,5 +1,6 @@
 ## Checks
 - 040c (memo recursive, DP)
+- 108b (triangle rotation)
 - 113c (demension reduction)
 - 114c (recursive, dfs)
 - 115d (recursive)
