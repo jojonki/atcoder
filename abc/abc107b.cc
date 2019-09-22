@@ -26,55 +26,78 @@ int main() {
             cin >> m[i][j];
         }
     }
-    vector<int> mh;
-    vector<int> mw;
-    REP(w, W) {
-        bool allWhite = true;
-        REP(h, H) {
-            if(m[h][w] != '.') {
-                allWhite = false;
+
+    vector<bool> row(H, false);
+    vector<bool> col(W, false);
+    REP(h, H) {
+        REP(w, W) {
+            if(m[h][w] == '#') {
+                row[h] = true;
+                col[w] = true;
             }
         }
-        if (allWhite) {
-            mw.push_back(w);
-        }
     }
+
     REP(h, H) {
-        bool allWhite = true;
-        REP(w, W) {
-            if(m[h][w] != '.') {
-                allWhite = false;
-            }
-        }
-        if (allWhite) {
-            mh.push_back(h);
-        }
-    }
-    // print(mw);
-    // print(mh);
-    vector<vector<char>> comp;
-    // print(comp.size());
-    REP(h, H) {
-        comp.resize(comp.size()+1);
-        REP(w, W) {
-            if(find(mh.begin(), mh.end(), h) == mh.end()) {
-                if(find(mw.begin(), mw.end(), w) == mw.end()) {
-                    int hh = comp.size()-1;
-                    int ww = comp[hh].size();
-                    // print(hh, ww);
-                    // print(h, w, m[h][w]);
-                    comp[hh].resize(comp[hh].size()+1);
-                    comp[hh][ww] = m[h][w];
+        if(row[h]) {
+            bool show = false;
+            REP(w, W) {
+                if(col[w]) {
+                    cout << m[h][w];
+                    show = true;
                 }
             }
+            if(show) cout << endl;
         }
     }
-    REP(h, comp.size()) {
-        REP(w, comp[h].size()) {
-            cout << comp[h][w];
-        }
-        if(comp[h].size() > 0) cout << endl;
-    }
+
+
+    // vector<int> mh;
+    // vector<int> mw;
+    // REP(w, W) {
+    //     bool allWhite = true;
+    //     REP(h, H) {
+    //         if(m[h][w] != '.') {
+    //             allWhite = false;
+    //         }
+    //     }
+    //     if (allWhite) {
+    //         mw.push_back(w);
+    //     }
+    // }
+    // REP(h, H) {
+    //     bool allWhite = true;
+    //     REP(w, W) {
+    //         if(m[h][w] != '.') {
+    //             allWhite = false;
+    //         }
+    //     }
+    //     if (allWhite) {
+    //         mh.push_back(h);
+    //     }
+    // }
+    // vector<vector<char>> comp;
+    // REP(h, H) {
+    //     comp.resize(comp.size()+1);
+    //     REP(w, W) {
+    //         if(find(mh.begin(), mh.end(), h) == mh.end()) {
+    //             if(find(mw.begin(), mw.end(), w) == mw.end()) {
+    //                 int hh = comp.size()-1;
+    //                 int ww = comp[hh].size();
+    //                 // print(hh, ww);
+    //                 // print(h, w, m[h][w]);
+    //                 comp[hh].resize(comp[hh].size()+1);
+    //                 comp[hh][ww] = m[h][w];
+    //             }
+    //         }
+    //     }
+    // }
+    // REP(h, comp.size()) {
+    //     REP(w, comp[h].size()) {
+    //         cout << comp[h][w];
+    //     }
+    //     if(comp[h].size() > 0) cout << endl;
+    // }
 
     
     return 0;
