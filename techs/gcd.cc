@@ -1,17 +1,16 @@
+#include<iostream>
+using namespace std;
+
 typedef long long ll;
 
 ll gcd(ll A, ll B) {
-    ll rem;
-    if(A<B) {
-        ll tmp = A;
-        A = B;
-        B = tmp;
-    }
-    rem = A % B;
-    if (rem == 0) {
-        return B;
-    }
+    return B? gcd(B, A%B) : A;
+}
 
-    return gcd(B, rem);
 
+int main() {
+    cout << gcd(18, 12) << endl;
+    cout << gcd(12, 18) << endl;
+
+    return 0;
 }
