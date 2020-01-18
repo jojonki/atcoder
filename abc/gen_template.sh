@@ -5,9 +5,16 @@ if [ $# -ne 2 ]; then
   exit 1
 fi
 
-# echo $2
+# c++
+# for char in `echo $2 | fold -w 1`; do
+#   echo "Generate abc$1$char" 
+#   cp code_template.cc ./abc$1$char.cc
+#   touch ./t/t_abc$1$char.txt
+# done
+
+# python
 for char in `echo $2 | fold -w 1`; do
   echo "Generate abc$1$char" 
-  cp code_template.cc ./abc$1$char.cc
+  touch ./abc$1$char.py
   touch ./t/t_abc$1$char.txt
 done

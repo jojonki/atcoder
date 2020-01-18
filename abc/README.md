@@ -11,6 +11,7 @@
 - 128c
 - 139e dfs, topology
 - 140d, RLE (Run Length Encoding)
+- 143d, bisect
 
 ## Ref
 - [AtCoder Problems](https://img.atcoder.jp/arc086/editorial.pdf)
