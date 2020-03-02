@@ -13,6 +13,7 @@
 - 140d, RLE (Run Length Encoding)
 - 143d, bisect
 - 144c
+- 157d, union-find
 
 ## Ref
 - [AtCoder Problems](https://img.atcoder.jp/arc086/editorial.pdf)
