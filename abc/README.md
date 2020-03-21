@@ -13,6 +13,8 @@
 - 140d, RLE (Run Length Encoding)
 - 143d, bisect
 - 144c
+- 146d, custom dfs
+- 152d, count
 - 157d, union-find
 
 ## Ref
