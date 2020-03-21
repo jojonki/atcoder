@@ -1,3 +1,5 @@
+import sys
+sys.setrecursionlimit(10000000)
 G = None
 ans = None
 
