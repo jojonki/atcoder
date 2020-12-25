@@ -14,8 +14,13 @@ fi
 
 # python
 for char in `echo $2 | fold -w 1`; do
-  echo "Generate abc$1$char" 
   # touch ./abc$1$char.py
-  cp template.py ./abc$1$char.py
+  F="./abc$1$char.py"
+  if [ ! -e $F ]; then
+    echo "Generate $F" 
+    cp template.py $F
+  else
+    echo "$F already exists"
+  fi
   touch ./t/t_abc$1$char.txt
 done
