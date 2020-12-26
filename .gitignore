@@ -34,4 +34,4 @@
 *.dSYM
 .DS_Store
 .vscode
-
+.envrc
