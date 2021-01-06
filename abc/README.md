@@ -1,5 +1,6 @@
 ## Checks
 - 040c (memo recursive, DP)
+- 104c (bit greedy search)
 - 108b (triangle rotation)
 - 113c (demension reduction)
 - 114c (recursive, dfs)
@@ -16,6 +17,7 @@
 - 146d, custom dfs
 - 152d, count
 - 75c, 120d, 157d, union-find
+- 156d (mod)
 - 159d, graph bsd
 
 ## Ref
