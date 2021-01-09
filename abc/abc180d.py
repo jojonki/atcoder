@@ -4,26 +4,17 @@ from math import pow
 def main():
     X, Y, A, B = map(int, input().split())
     i = 0
-    power = X
-    while power < Y:
-        kakomon = X * pow(A, (i + 1))
-        atcoder = power + B
+    while X < Y:
+        kakomon = X * A
+        atcoder = X + B
         if kakomon < atcoder:
-            power = kakomon
-            if power >= Y:
+            X = kakomon
+            if X >= Y:
                 break
-            # print('@kakomon', power)
+            i += 1
         else:
-            power = atcoder
-            if power >= Y:
-                break
-            # print('@atcoder', power)
-            # i += (Y - power) // B
-
-            # break
-        if power >= Y:
+            i += (Y - X - 1) // B
             break
-        i += 1
 
     print(int(i))
 
