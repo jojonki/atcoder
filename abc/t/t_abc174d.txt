@@ -1,0 +1,14 @@
+2
+WW
+2
+WR
+2
+RW
+2
+RR
+
+8
+WRWWRWRR
+
+4
+WWRR
