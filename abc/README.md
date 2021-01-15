@@ -19,6 +19,7 @@
 - 75c, 120d, 157d, union-find
 - 156d (mod)
 - 159d, graph bsd
+- 173c, bit
 - 183d, imosu
 - 188e, dag, dp
 
