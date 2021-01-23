@@ -27,6 +27,10 @@ def mod_pow_for(a, n, mod):
 
 
 # xの逆元をフェルマーの小定理で求める
+# フェルマーの小定理の証明と使い方
+# https://qiita.com/drken/items/6b4031ccbb2cab7436f3
+#    a^{p-1} ≡ 1 (mod p)
+# -> a * a^{p-2} ≡ 1 (mod p)   // a^{p-2}がaの逆元になっている
 def mod_inv(x, mod):
     return mod_pow_rec(x, mod - 2, mod)
 
