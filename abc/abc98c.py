@@ -7,8 +7,8 @@ def read_ints():
 
 
 def main():
+    N = int(input())
     S = list(input())
-    N = len(S)
     W, E = [0] * N, [0] * N
     for i in range(N):
         if S[i] == 'W':
@@ -23,7 +23,7 @@ def main():
                 W[i] = W[i - 1]
 
         k = N - 1 - i
-        if E[k] == 'E':
+        if S[k] == 'E':
             if k == N - 1:
                 E[k] = 1
             else:
@@ -33,8 +33,17 @@ def main():
                 E[k] = 0
             else:
                 E[k] = E[k + 1]
-    print(W)
-    print(E)
+    ans = float('inf')
+    for i in range(N):
+        if i == 0:
+            ans = min(ans, E[i + 1])
+        elif i == N - 1:
+            ans = min(ans, W[i - 1])
+        else:
+            ans = min(ans, W[i - 1] + E[i + 1])
+    # print(W)
+    # print(E)
+    print(ans)
 
 
 main()
