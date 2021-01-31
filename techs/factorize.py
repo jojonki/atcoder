@@ -4,6 +4,13 @@
 import math
 
 
+def gcd(m, n):
+    if n == 0:
+        return m
+
+    return gcd(n, m % n)
+
+
 def prime_factorize(N):
     """素因数分解
     Return:
@@ -25,6 +32,22 @@ def prime_factorize(N):
         res.append((i, exp_ct))
     if N != 1:
         res.append((N, 1))
+
+    return res
+
+
+def get_factors(N, sort=True):
+    # 約数のリストを返す
+    # 12 -> 1, 2, 3, 4, 6, 12
+    res = []
+    for i in range(1, int(math.sqrt(N)) + 1):
+        if N % i != 0:
+            continue
+        res.append(i)  # 12 / 2 = 6
+        res.append(N // i)  # 12 / 6 = 2
+
+    if sort:
+        res.sort()
 
     return res
 
