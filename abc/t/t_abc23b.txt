@@ -1,0 +1,11 @@
+19
+bcabcabcabcabcabcab
+
+7
+atcoder
+
+6
+abcabc
+
+3
+abc
