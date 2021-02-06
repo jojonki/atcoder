@@ -1,0 +1,9 @@
+3
+a
+aa
+b
+
+3
+cbaa
+daacc
+acacac
