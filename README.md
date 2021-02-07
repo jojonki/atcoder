@@ -23,6 +23,7 @@
 - 173c, bit
 - 183d, imosu
 - 188e, dag, dp
+- 191e, dijkstra
 
 ## ARC
 - 029a dfs, bit, greedy
