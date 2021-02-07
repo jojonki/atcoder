@@ -24,7 +24,8 @@ def dijkstra(N, edges, start, goal):
 
     while q:
         total_cost, from_node = heapq.heappop(q)
-        if res < total_cost:
+        if total_cost > cost[from_node]:
+            # already exists less cost path
             continue
 
         for c, to_node in edges[from_node]:
