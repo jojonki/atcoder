@@ -1,8 +1,9 @@
 ## ABC
 - 040c (memo recursive, DP)
+- 048b (a<=v<=b 数え上げ)
 - 104c (bit greedy search)
 - 108b (triangle rotation)
-- 113c (demension reduction)
+- 113c (dimension reduction)
 - 114c (recursive, dfs)
 - 115d (recursive)
 - 116c (tower range)
