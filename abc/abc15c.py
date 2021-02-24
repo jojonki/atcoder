@@ -50,7 +50,7 @@ def main_dfs():
     if dfs(0, 0):
         print('Found')
     else:
-        print(Nothing)
+        print('Nothing')
 
 
 # main()
