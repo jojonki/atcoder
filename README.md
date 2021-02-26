@@ -11,6 +11,7 @@
 - 125c (GCD, left-right)
 - 128b
 - 128c
+- 138d dfs
 - 139e dfs, topology
 - 140d, RLE (Run Length Encoding)
 - 143d, bisect
