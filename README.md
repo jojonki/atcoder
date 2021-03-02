@@ -17,6 +17,7 @@
 - 143d, bisect
 - 144c
 - 146d, custom dfs
+- 148e, double factorial
 - 152d, count
 - 75c, 120d, 157d, union-find
 - 156d (mod)
