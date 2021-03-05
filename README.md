@@ -33,6 +33,7 @@
 
 ## AGC
 - 35a, XOR
+- 36a, triangle, combination
 
 ## Ref
 - [AtCoder Problems](https://img.atcoder.jp/arc086/editorial.pdf)
