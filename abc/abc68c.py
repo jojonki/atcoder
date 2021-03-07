@@ -45,4 +45,42 @@ def main():
         print('IMPOSSIBLE')
 
 
-main()
+from collections import defaultdict
+from collections import deque
+
+
+def main2():
+    N, M = read_ints()
+
+    to = defaultdict(list)
+
+    for _ in range(M):
+        a, b = read_ints()
+        a -= 1
+        b -= 1
+        to[a].append(b)
+        to[b].append(a)
+
+    q = deque()
+    q.append((0, 0))
+
+    while q:
+        node, dist = q.popleft()
+        if dist > 2:
+            continue
+
+        if node == N - 1:
+            print('POSSIBLE')
+            return
+
+        if dist == 2:
+            continue
+
+        for to_node in to[node]:
+            q.append((to_node, dist + 1))
+
+    print('IMPOSSIBLE')
+
+
+# main()
+main2()
