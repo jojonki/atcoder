@@ -11,9 +11,31 @@ def rec(cur, use_flag, ct, N):
     return ct
 
 
+# def main():
+# N = int(input())
+# print(rec(0, 0, 0, N))
+
+ans = 0
+
+
 def main():
     N = int(input())
-    print(rec(0, 0, 0, N))
+
+    def dfs(v, flag):
+        global ans
+        # global ans
+        if v > N:
+            return
+
+        if flag == 0x111:
+            ans += 1
+
+        dfs(10 * v + 7, flag | 0x100)
+        dfs(10 * v + 5, flag | 0x010)
+        dfs(10 * v + 3, flag | 0x001)
+
+    dfs(0, 0x000)
+    print(ans)
 
 
 main()

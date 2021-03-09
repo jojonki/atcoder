@@ -19,10 +19,11 @@ def main():
     for i in range(H):
         M.append(list(input()))
         if 's' in M[-1]:
-            sx = M[-1].index('s')
-            sy = i
+            sy = M[-1].index('s')
+            sx = i
 
         visited.append([False] * W)
+    # print(sx, sy)
 
     def dfs(r, c):
         visited[r][c] = True
